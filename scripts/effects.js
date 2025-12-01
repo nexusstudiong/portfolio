@@ -33,7 +33,7 @@ if (width <= thbW*2) {
 for (let i = 0; i < thnum; i++) {
     tcont.innerHTML += `
         <div class="thumbs">
-            <video src="https://nexusstudiong.github.io/portfolio/media/vids/${i+1}.mp4" loop autoplay muted playsinline></video>
+            <video src="https://moveeasecrew.com/media/vids/${i+1}.mp4" loop autoplay muted playsinline></video>
         </div>`;    
 }
 
