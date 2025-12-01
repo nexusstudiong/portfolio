@@ -1,0 +1,120 @@
+* {
+    color: #111;
+}
+body {
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #111;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-radius: 1000px;
+}
+#logo {
+    background-color: #fff;
+    filter: invert(1);
+}
+.navlink a {
+    color: #111;
+}
+.navlink:hover .link {
+    color: #111;
+}
+.navlink:hover .link:hover {
+    color: #1f497d;
+    transform: translateX(-10px);
+}
+header {
+    background-image: url('https://nexusstudiong.github.io/portfolio/media/bg2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+header .ins {
+    background-color: #fffa;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h1 {
+    color: #111;
+    font-size: 5rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+section {
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+section h2 {
+    font-size: 2.3rem;
+    margin-top: 30px;
+    color: #1f497d;
+    line-height: 1;
+}
+section h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: #1f497d;
+    font-weight: 600;
+    line-height: 1;
+}
+section p, section li {
+    font-size: 1.3rem;
+}
+section ul, section ol {
+    margin-left: 50px;
+}
+#ques {
+    margin-top: 30px;
+}
+section li a {
+    color: #111;
+}
+section li a:hover {
+    color: #1f497d;
+    text-decoration-color: #1f497d;
+}
+@media (min-width: 1800px) {
+    #hhd {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 1300px) {
+    #hhd {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .res, .navlinkp {
+        background-color: #fff;
+        border-bottom: 1px solid #aaa;
+    }
+    .navlinkp {
+        background-color: #fffa;
+        backdrop-filter: blur(20px);
+    }
+    #hhd {
+        padding: 0;
+    }
+    #hhd .ins {
+        padding: 140px 0 100px;
+    }
+    header h1 {
+        font-size: 3.5rem;
+    }
+    section h2 {
+        font-size: 1.7rem;
+    }
+    section p, section li {
+        font-size: 1.2rem;
+    }
+    section ul, section ol {
+        margin-left: 25px;
+    }
+}

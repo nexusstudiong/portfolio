@@ -1,0 +1,166 @@
+#hhd {
+    background: none;
+    height: fit-content;
+    padding: 50px 3vw 0;
+}
+header .ins {
+    flex-direction: column;
+    padding: 40px 5vw 0;
+    row-gap: 20px;
+}
+section h2 {
+    margin-bottom: 30px;
+}
+.flyers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.flyers div {
+    width: calc(15vw + 70px);
+}
+.flyers div img {
+    width: 100%;
+    transition-duration: 0.2s;
+}
+.flyers div img:hover {
+    scale: 1.1;
+}
+.flyers .wide {
+    width: 450px;
+}
+#first {
+    display: flex;
+    flex-direction: column;
+}
+#first div {
+    display: flex;
+    justify-content: start;
+    column-gap: 3vw;
+    align-items: center;
+}
+#first > p {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #888;
+    font-style: italic;
+}
+#first a {
+    color: #7676ba;
+    text-decoration: underline;
+}
+#first .phn {
+    width: 17vw;
+}
+#first .lapt {
+    width: 63vw;
+}
+.laptdiv, .phndiv {
+    position: relative;
+    overflow: hidden;
+}
+.laptdiv video {
+    width: 81.5%;
+    position: absolute;
+    top: 5.3%;
+    left: 10%;
+    z-index: -1;
+}
+.phndiv video {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    padding: 1px 0.25vw 0;
+}
+.thumbcont {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2vw;
+    justify-content: center;
+}
+.thumbs {
+    aspect-ratio: 1.7778;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #aaa;
+    transition-duration: 0.3s;
+    border: 2px solid #1f497d;
+    border-radius: 7px;
+}
+.thumbs:hover {
+    scale: 1.05;
+}
+.thumbs video {
+    height: 100%;
+}
+#wrks {
+    padding-bottom: 0;
+}
+.stack a {
+    color: #1f497d;
+    text-decoration: underline;
+}
+@media (max-width: 800px) {
+    #hhd {
+        padding: 0 5vw 0;
+    }
+    #hhd .ins {
+        padding-bottom: 0;
+    }
+    header .ins p {
+        margin-bottom: 50px;
+    }
+    .flyers {
+        align-items: center;
+        /* flex-wrap: nowrap; */
+        flex-direction: column;
+        gap: 4vw;
+    }
+    .flyers div, .flyers .wide {
+        width: 100%;
+    }
+    #first div {
+        justify-content: center;
+    }
+    #first div .laptdiv {
+        display: none;
+    }
+    .phndiv {
+        width: 50%;
+    }
+    #first .phn {
+        width: 100%;
+    }
+    .phndiv video {
+        position: absolute;
+        padding: 1px 0.6vw 0;
+    }
+    #first {
+        justify-content: center;
+    }
+}
+@media (max-width: 500px) {
+    .ins h1 {
+        font-size: 3rem;
+    }
+    .ins p {
+        font-size: 1rem;
+    }
+    .phndiv {
+        width: 100%;
+    }
+    .phndiv video {
+        position: absolute;
+        padding: 4px 1.5vw 0;
+    }
+    #first > p {
+        font-size: 0.8rem;
+    }
+}
