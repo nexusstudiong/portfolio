@@ -11,16 +11,15 @@ let screenHeight;
 let thbW = 380;
 
 let width;
-let thbs = document.getElementsByClassName('thumbs');
+let thbs = document.getElementsByClassName('webcard');
 
 let tcont = document.getElementsByClassName('thumbcont')[0] || "";
 width = window.innerWidth;
 
-let thnum = 6;
+let thnum = 7;
+let setthnum = thnum;
 
-if (width <= thbW*2) {
-    console.log('nothing');
-} else if (width <=thbW*3) {
+if (width <=thbW*3) {
     thnum = thnum%2 + thnum;
 } else if (width <=thbW*4) {
     thnum = (3-thnum%3) + thnum;
@@ -30,14 +29,61 @@ if (width <= thbW*2) {
     thnum = (5-thnum%5) + thnum;
 }
 
-for (let i = 0; i < thnum; i++) {
-    tcont.innerHTML += `
-        <div class="thumbs">
-            <video src="https://moveeasecrew.com/media/vids/${i+1}.mp4" loop autoplay muted playsinline></video>
-        </div>`;    
-}
+let link = "";
+let note = "";
 
-console.log(tcont);
+for (let i = 0; i < thnum; i++) {
+    if (i == 0) {
+        link = "http://127.0.0.1:5500/Samples/flowclone/"
+    } else if (i == 1) {
+        link = "http://127.0.0.1:5500/Samples/cookie/"
+    } else if (i == 2) {
+        link = "http://127.0.0.1:5500/Samples/gameon/"
+    } else if (i == 3) {
+        link = "http://127.0.0.1:5500/Samples/brand/"
+    } else if (i == 4) {
+        link = "http://127.0.0.1:5500/"
+    } else if (i == 5) {
+        link = "https://moveeasecrew.com/"
+    } else if (i == 6) {
+        link = "http://127.0.0.1:5500/Samples/port1/"
+    } else {
+        link = "";
+    }
+
+    if (i == 0) {
+        note = `This is a static sample website inspired by <a href="https://justgowiththeflow.com">justgowiththeflow.com</a>. This was developed by me.`
+    } else if (i == 1) {
+        note = `This is an incomplete sample website inspired by a design from <a href="https://www.instagram.com/marcelodesignxh">Marcelo Cadeno</a> on instagram. This was developed by me.`
+    } else if (i == 2) {
+        note = "This is an incomplete sample website developed by me."
+    } else if (i == 3) {
+        note = "This is an incomplete sample website developed by me."
+    } else if (i == 4) {
+        note = "This is my portfolio website. Designed and developed by me"
+    } else if (i == 5) {
+        note = "This is a complete inquiry website I designed and developed for a client"
+    } else if (i == 6) {
+        note = "This is a sample website with an experimental design language"
+    } else {
+        note = "";
+    }
+
+    
+    tcont.innerHTML += `
+        <div class="webcard">
+            <div class="thumbs">
+                <a href="${link}"><video src="https://moveeasecrew.com/media/vids/${i+1}.mp4" loop autoplay muted playsinline></video></a>
+            </div>
+            <p>${note}</p>
+        </div>
+    `;
+    if (i > setthnum-1) {
+        const disT = document.getElementsByClassName('thumbs')[i];
+        disT.innerHTML = "";
+        disT.style.opacity = 0;
+    }
+}
 
 function screenH() {
     screenHeight = innerHeight;

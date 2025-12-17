@@ -83,18 +83,31 @@ section h2 {
     column-gap: 2vw;
     justify-content: center;
 }
+.webcard {
+    margin-bottom: 30px;
+    transition-duration: 0.3s;
+}
+.webcard p {
+    font-size: 0.8rem;
+    color: #888;
+    line-height: 1.2;
+    font-style: italic;
+    margin-top: 5px;
+}
+.webcard a {
+    color: #7676ba;
+    text-decoration: underline;
+}
 .thumbs {
     aspect-ratio: 1.7778;
-    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     overflow: hidden;
     background-color: #aaa;
-    transition-duration: 0.3s;
     border: 2px solid #1f497d;
     border-radius: 7px;
 }
-.thumbs:hover {
+.webcard:hover {
     scale: 1.05;
 }
 .thumbs video {
