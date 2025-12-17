@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="gsap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="splittext.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script> -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body id="body">
+    <div class="fleft">
+        <div id="fdd">
+            <h2>P!NKISH</h2>
+            <p>(Makeup/Fashion)</p>
+        </div>
+    </div>
+    <div class="over">
+        <nav>
+            <div class="link">
+                <a href="">About</a><a href="">Services</a><a href="">Work</a>
+            </div>
+            <div>
+                <a href="" class="hi">Say Hi to Us</a>
+            </div>
+        </nav>
+        <div class="mid dis">
+            <div><p class="ans">Beauty/Fashion<br>Brand</p></div>
+            <div><p class="ans">Gen Z Aesthetic<br>Makeup</p></div>
+        </div>
+        <div id="an" class="dis">
+            <div><p id="an1" class="ans">Introducing only the best</p></div>
+            <div><p id="an2" class="ans">that you'll ever find.</p></div>
+            <div><p id="an3" class="ans">We have what you're</p></div>
+            <div><p id="an4" class="ans">looking for here!</p></div>
+        </div>
+    </div>
+    <header>
+        <div class="headpic">
+            <div class="phnslide psp1"></div>
+            <div class="phnslide psp2"></div>
+            <div class="phnslide psp3"></div>
+        </div>
+        <div class="headtxt">
+            <div class="phnhead">
+                <nav>
+                    <h2>P!NKISH</h2>
+                    <a href="">Menu</a>
+                </nav>
+                <div>
+                    <p class="phnexp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, maiores accusamus?</p>
+                </div>
+                <div class="phnbtm">
+                    <p class="ans">Beauty/Fashion<br>Brand</p>
+                    <p class="ans">Gen Z Aesthetic<br>Makeup</p>
+                </div>
+            </div>
+            <div id="swipe1"></div>
+            <div id="swipe2">
+                <div class="logo"></div>
+            </div>
+            <div id="swipe3">
+                <h1 id="pnktxt"><p id="p1">P</p><p id="p2">!</p><p id="p3">N</p><p id="p4">K</p><p id="p5">I</p><p id="p6">S</p><p id="p7">H</p></h1>
+            </div>
+        </div>
+        <script>
+            let divide = SplitText.create(".phnexp", { type: "lines", linesClass: "line"});
+
+            gsap.fromTo(divide.lines, {
+                duration: 0.5,
+                y: 50,
+                stagger: 0.1,
+                opacity: 0
+            },
+            {
+                y: 0,
+                duration: 0.5,
+                stagger: 0.1,
+                opacity: 1
+            }
+        );
+        </script>
+    </header>
+    <div id="bd1">
+        <p id="txt1"><img src="bg2.jpg" alt="" id="img1"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate atque repellat voluptatibus quidem est laudantium placeat eligendi! Dolores distinctio, suscipit fugit quam, quia, aliquid maiores itaque doloribus dignissimos ex provident? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="txt2">
+            <p>P!NKISH is the #1 women's<br>brand for styles</p>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat suscipit placeat molestias sequi veritatis sit temporibus aperiam expedita deserunt, facere enim dolorum magni sint incidunt at a itaque sed fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, natus assumenda inventore provident in ullam ex voluptas. Repellendus incidunt nostrum id nulla molestiae fuga! Ad culpa et deserunt reiciendis itaque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda porro commodi ipsum iste sit, fugit omnis nihil tenetur, quibusdam eaque velit esse reprehenderit doloribus deserunt quod atque optio sed tempore!
+                <br><br>
+                <a href="">More about our approach</a>
+            </p>
+        </div>
+    </div>
+    <div id="bd2">
+        <div id="txt2p">
+            <i></i>
+            <div class="tit">
+                <div class="panim1 panimp">
+                    <h1 class="panimh">1</h1>
+                    <h1 class="panimh">2</h1>
+                </div>
+                <div>
+                    <div class="panim2 panimp">
+                        <h1 class="panimh">P!NKISH Infinity</h1>
+                        <h1 class="panimh">P!NKISH Makeup</h1>
+                    </div>
+                    <div class="panim3 panimp">
+                        <h1 class="panimh">Fashion Plan</h1>
+                        <h1 class="panimh">and Beauty</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="prd1">
+                <div class="panim4 panimp">
+                    <h2 class="panimh">Fashion Designing</h2>
+                    <h2 class="panimh">Beautification</h2>
+                </div>
+                <div class="panim5 panimp">
+                    <h2 class="panimh">/Modelling Agency</h2>
+                    <h2 class="panimh">/Makeup Agency</h2>
+                </div>
+                <div class="thb1">
+                    <div class="thb2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="img2p">
+            <div id="img2p2">
+            </div>
+        </div>
+    </div>
+    <div id="bd3">
+        <div class="aft">
+            <div class="ttxtt">
+                <h1 id="spl2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo facere placeat, incidunt modi necessitatibus aliquam illum.</h1>
+                <a id="spl2a">More about our products</a>
+            </div>
+            <div class="iimgg">
+                <div class="img" id="img2a"></div>
+                <p id="imgalt">The CEO of P!NKISH International at a prestigeous event</p>
+            </div>
+        </div>
+        <div class="bigt">
+            <h1 id="bigth1">MAKEUP<br>& FASHION<br>PRODUCTION</h1>
+        </div>
+        <div class="aaft2">
+            <div class="picdi">
+                <div id="piccrop"></div>
+                <p id="picdesc">These are some of our bestselling products over the years</p>
+            </div>
+            <div class="ttxtt2">
+                <h1 id="spl3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ab, ipsam praesentium est quos magnam numquam.
+                    <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, nemo ut?
+                </h1>
+                <a id="spl3a">More about our products</a>
+            </div>
+        </div>
+        <!-- <div class="aft2">
+        </div> -->
+    </div>
+    <footer id="footer">
+        <div class="f1">
+            <div class="f1a">
+                <div class="f1ahead">
+                    <h1 id="splp">P!NKISH</h1>
+                </div>
+                <div class="f1afoot">
+                    <div class="navi">
+                        <p class="label"><span>(Navigate)</span>
+                        <a href="">Home</a><a href="">Work</a><a href="">Services</a><a href="">About</a><a href="">Contact</a></p>
+                    </div>
+                    <div class="conn">
+                        <p class="label"><span>(Connect)</span>
+                        <a href="">Instagram</a><a href="">Whatsapp</a><a href="">LinkedIn</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="f1b">
+                <div class="f1bhead">
+                    <p id="spl7">Ready to Rock? <br><a href="">Get in touch</a></p>
+                </div>
+                <div class="f1bfoot">
+                    <p class="label"><span>(About Us)</span>
+                    <a href="">Ibadan, Nigeria</a><a href="">Lagos, Nigeria</a><a href="">Miami, USA</a><a href="">CT, South Africa</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="f2">
+            <p>All Rights NOT reserved. P!NKISH 2025</p>
+            <p>Privacy Policy / Terms</p>
+            <p id="totop">Back to Top<!--DONT FORGET TO PUT THE ICON HERE!!!--></p>
+            <p>Shift + G</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

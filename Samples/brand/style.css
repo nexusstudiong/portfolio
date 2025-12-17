@@ -1,0 +1,353 @@
+@font-face {
+    font-family: fubiox;
+    src: url(./font/ain.ttf);
+}
+@keyframes curs {
+    0%{cursor: pointer;}
+    100%{}
+}
+@keyframes txtgo {
+    0% {transform: translateY(0%);}
+    100% {transform: translateY(110%);}
+}
+::-webkit-scrollbar {
+    display: none;
+}
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+.cursor {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    background-color: #00ff15;
+    z-index: 100;
+    border-radius: 50%;
+    transform: translateX(-100%) translateY(-50%);
+}
+body {
+    background-color: #548c59;
+    /*
+    animation-name: none;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-delay: 0;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    */
+}
+.bg {
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    overflow: hidden;
+    position: fixed;
+}
+.bg video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    animation-name: none;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+.txtbox {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    bottom: 0;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.txtbox2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    animation-name: none;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.title {
+    font-size: 150px;
+    color: #fff;
+    margin: 0 80px;
+    line-height: 1.5;
+    font-family: 'fubiox';
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+.title div {
+    font-size: 45px;
+    margin: 40px 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+    border: 5px solid white;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exp {
+    width: 45%;
+    padding-right: 20px;
+    font-size: 11px;
+    font-family: sans-serif;
+    color: #fff;
+    font-weight: lighter;
+    line-height: 15px;
+    margin-right: 20px;
+}
+nav {
+    position: fixed;
+    color: #fff;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+}
+nav button {
+    color: #fff;
+    width: 25%;
+    padding: 50px 0;
+    border: 0;
+    background: transparent;
+    font-family: 'century gothic';
+    font-size: 13px;
+}
+nav button p {
+    text-underline-offset: 4px;
+}
+nav button:hover p {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+@keyframes bg1 {
+    0% {opacity: 1;}
+    100% {opacity: 0.15;}
+}
+@keyframes bg2 {
+    0% {opacity: 0.15;}
+    100% {opacity: 1;}
+}
+@keyframes bg3 {
+    0% {opacity: 0.15;}
+    100% {opacity: 0;}
+}
+
+
+@keyframes work1 {
+    0% {clip-path: polygon(0 0, 25% 0, 25% 0, 0 0);}
+    100% {clip-path: polygon(0 0, 25% 0, 25% 100%, 0 100%);}
+}
+@keyframes work2 {
+    0% {clip-path: polygon(0 0, 25% 0, 25% 100%, 0 100%);}
+    100% {clip-path: polygon(0 0, 25% 0, 25% 0, 0 0);}
+}
+@keyframes work3 {
+    0% {clip-path: polygon(0 0, 25% 0, 25% 100%, 0 100%);}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+}
+@keyframes work4 {
+    0% {clip-path: polygon(12.5% 0, 12.5% 0, 12.5% 100%, 12.5% 100%);}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+}
+
+
+@keyframes about1 {
+    0% {clip-path: polygon(25% 0, 50% 0, 50% 0, 25% 0);}
+    100% {clip-path: polygon(25% 0, 50% 0, 50% 100%, 25% 100%);}
+}
+@keyframes about2 {
+    0% {clip-path: polygon(25% 0, 50% 0, 50% 100%, 25% 100%);}
+    100% {clip-path: polygon(25% 0, 50% 0, 50% 0, 25% 0);}
+}
+@keyframes about3 {
+    0% {clip-path: polygon(25% 0, 50% 0, 50% 100%, 25% 100%);}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+}
+@keyframes about4 {
+    0% {clip-path: polygon(37.5% 0, 37.5% 0, 37.5% 100%, 37.5% 100%);}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+}
+
+
+@keyframes service1 {
+    0% {clip-path: polygon(50% 0, 75% 0, 75% 0, 50% 0);}
+    100% {clip-path: polygon(50% 0, 75% 0, 75% 100%, 50% 100%);}
+}
+@keyframes service2 {
+    0% {clip-path: polygon(50% 0, 75% 0, 75% 100%, 50% 100%);}
+    100% {clip-path: polygon(50% 0, 75% 0, 75% 0, 50% 0);}
+}
+@keyframes service3 {
+    0% {clip-path: polygon(50% 0, 75% 0, 75% 100%, 50% 100%);}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+}
+@keyframes service4 {
+    0% {clip-path: polygon(62.5% 0, 62.5% 0, 62.5% 100%, 62.5% 100%);}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+}
+
+
+@keyframes contact1 {
+    0% {clip-path: polygon(75% 0, 100% 0, 100% 0, 75% 0);}
+    100% {clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);}
+}
+@keyframes contact2 {
+    0% {clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);}
+    100% {clip-path: polygon(75% 0, 100% 0, 100% 0, 75% 0);}
+}
+@keyframes contact3 {
+    0% {clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+}
+@keyframes contact4 {
+    0% {clip-path: polygon(87.5% 0, 87.5% 0, 87.5% 100%, 87.5% 100%);}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+}
+
+.drpdn {
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    overflow: hidden;
+    position: fixed;
+    clip-path: polygon(0 0, 25% 0, 25% 0, 0 0);
+    animation-name: none;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.drpdn video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+}
+@keyframes titlecome {
+    0% {transform: translateY(110%);}
+    100% {transform: translateY(0%);}
+}
+@keyframes titlego {
+    0% {transform: translateY(0%);}
+    100% {transform: translateY(110%);}
+}
+.titlebox {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    top: 50%;
+    margin: 0 0;
+    overflow: hidden;
+    transform: translateY(-60%);
+}
+.titlebox2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    transform: translateY(110%);
+    animation-name: none;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+.title2 {
+    font-size: 130px;
+    color: #fff;
+    margin: 0 80px;
+    line-height: 190px;
+    font-family: 'fubiox';
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    /*
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    */
+}
+.padding {
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+}
+.workscroll {
+    width: 100%;
+    height: 100vh;
+    background-color: #ff0000;
+    display: none;
+}
+.aboutscroll {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffff00;
+    display: none;
+}
+.servicescroll {
+    width: 100%;
+    height: 100vh;
+    background-color: #0f0;
+    display: none;
+}
+.contactscroll {
+    width: 100%;
+    height: 100vh;
+    background-color: #4ad199;
+    display: none;
+}
+@media (max-width: 800px) {
+    .bg video {
+        height: 100%;    }
+    .drpdn video {
+        height: 100%;
+    }
+    .title2 {
+        font-size: 80px;
+    }
+    .txtbox2 {
+        flex-direction: column;
+        /* align-items: start; */
+    }
+    .title {
+        font-size: 90px;
+        margin: 0;
+    }
+    .title div {
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+        border: 4px solid #fff;
+        transform: translateY(-60%);
+    }
+    .exp {
+        width: 100%;
+        padding-right: 0;
+        margin-right: 0;
+        padding: 20px;
+        text-align: center;
+    }
+}

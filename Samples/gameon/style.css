@@ -1,0 +1,229 @@
+@font-face {
+    font-family: out;
+    src: url(outfit.ttf);
+}
+@keyframes ldr {
+    0% {filter: blur(0px);}
+    50% {filter: blur(5px);}
+    100% {filter: blur(0px);}
+}
+@keyframes ldrGone {
+    0% {height: 50px;}
+    100% {height: 0px;}
+}
+@keyframes gOcome {
+    0% {height: 0px;}
+    100% {height: 125px;}
+}
+@keyframes gOcome2 {
+    0% {font-size: 100px;}
+    100% {font-size: 120px;}
+}
+@keyframes gOcomem {
+    0% {height: 0px;}
+    100% {height: 65px;}
+}
+@keyframes gOcome2m {
+    0% {font-size: 50px;}
+    100% {font-size: 60px;}
+}
+@keyframes bgBlur {
+    0% {filter: blur(20px); width: 110%;}
+    100% {filter: blur(5px); width: 105%;}
+}
+@keyframes navCome {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'out', sans-serif;
+}
+.load {
+    width: 100%;
+    height: 100vh;
+    background-color:#ffa799;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.load img {
+    filter: blur(10px);
+    animation-name: bgBlur;
+    animation-duration: 0.5s;
+    animation-delay: 5.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+}
+.loadText {
+    position: fixed;
+    letter-spacing: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-100%) translateX(-50%);
+    font-size: 40px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    
+    animation-name: ldrGone;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+}
+.ld1, .ld2, .ld3, .ld4, .ld5, .ld6, .ld7 {
+    animation-name: ldr;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    color: #fff;
+}
+.ld1 {
+    animation-delay: 0s;
+}
+.ld2 {
+    animation-delay: 0.43s;
+}
+.ld3 {
+    animation-delay: 0.86s;
+}
+.ld4 {
+    animation-delay: 1.29s;
+}
+.ld5 {
+    animation-delay: 1.71s;
+}
+.ld6 {
+    animation-delay: 2.14s;
+}
+.ld7 {
+    animation-delay: 2.57s;
+}
+
+.gO {
+    position: fixed;
+    letter-spacing: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-75%) translateX(-50%);
+    text-align: center;
+    overflow: hidden;
+    color: #ffeaf0;
+    
+    animation-name: gOcome, gOcome2;
+    animation-duration: 0.5s;
+    animation-delay: 4.5s, 5.5s;
+    animation-fill-mode: both;
+    /*
+    background-image: linear-gradient(to right, #ffdeff, #ffcbcb, #ffffc4);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    */
+}
+nav {
+    width: 100%;
+    padding: 10px 5%;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    animation-name: navCome;
+    animation-duration: 0.5s;
+    animation-delay: 5.75s;
+    animation-fill-mode: both;
+}
+.logo-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-div p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+.logo {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.dl {
+    padding: 8px 23px;
+    color: #ffffff;
+    border-radius: 100px;
+    border: transparent;
+    background-color: #000000;
+    border: 2px solid #000000;
+    font-size: 14px;
+    font-weight: bold;
+    transition-duration: 0.4s;
+}
+.dl:hover {
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+}
+.link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a {
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 0 10px;
+    text-decoration: none;
+    position: relative;
+    color: #ffffff;
+    font-size: 15px;
+    border: 0;
+}
+a:after {
+    content: "";
+    position: absolute;
+    background-color: #ff2391;
+    width: 0;
+    height: 3px;
+    border: 0;
+    left: 50%;
+    bottom: -10px;
+    transition-duration: 0.4s;
+}
+a:hover:after {
+    background-color: #ff2391;
+    width: 100%;
+    height: 3px;
+    border: 0;
+    left: 0;
+    transition-duration: 0.4s;
+}
+.hamb {
+    display: none;
+}
+@media (max-width: 800px) {
+    .link, .dl {
+        display: none;
+    }
+    .gO {
+        animation-name: gOcomem, gOcome2m;
+        /* animation-delay: 0s, 0s; */
+        width: 100%;
+    }
+    .hamb {
+        display: block;
+        background-color: #fff;
+        width: 40px;
+        height: 20px;
+    }
+}

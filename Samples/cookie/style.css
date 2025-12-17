@@ -1,0 +1,311 @@
+@font-face {
+    font-family: bold;
+    src: url(./fonts/Outfit-Bold.ttf);
+}@font-face {
+    font-family: thin;
+    src: url(./fonts/Outfit-Thin.ttf);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+p {
+    margin: 0;
+}
+.scroll {
+    width: 100%;
+    height: 200vh;
+    background-color: #a8a8a8;
+}
+.c3 {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff8f0;
+    position: fixed;
+    z-index: 1;
+}
+.circleBg {
+    width: 40vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #fddaad;
+    /*background-color: #ddb279;*/
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    filter: blur(5px);
+}
+.circleBg2 {
+    width: 100vw;
+    height: 100vw;
+    border-radius: 50%;
+    background-color: #24100e;
+    /*background-color: #ddb279;*/
+    position: fixed;
+    z-index: 2;
+    left: 155%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    filter: blur(2px);
+}
+.landC {
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.landC p {
+    font-family: 'bold', sans-serif;
+    color: #1f0b09;
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: bold;
+    line-height: 0.76;
+    font-size: 200px;
+}
+.fade0 {
+    color: #1f0b09;
+    font-family: 'Geometr415 Blk BT', sans-serif;
+    position: fixed;
+    transform: translateX(-50%) translateY(-234px);
+}
+.fade1, .fade2 {
+    color: transparent;
+    font-family: 'Geometr415 Blk BT', sans-serif;
+    -webkit-text-stroke-color: black;
+    text-align: center;
+}
+.fade1 {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;
+    position: fixed;
+    transform: translateX(-50%) translateY(-78px);
+}
+.fade2 {
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #000000;
+    position: fixed;
+    transform: translateX(-50%) translateY(78px);
+}
+.coo {
+    font-family: 'bold';
+    letter-spacing: 000px;
+}
+.cookies {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+#cook1 {
+    z-index: 7;
+    width: 250px;
+    transform: translateX(-50%) translateY(-50%);
+}
+#cook2 {
+    z-index: 8;
+    width: 350px;
+    transform: translateX(-50%) translateY(-50%);
+}
+#cook3 {
+    z-index: 6;
+    width: 250px;
+    transform: translateX(-50%) translateY(-50%);
+}
+#plate {
+    width: 250px;
+    z-index: 5;
+    transform: translateX(-50%) translateY(-50%);
+    filter: drop-shadow(0 0 10px #000000);
+}
+.nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-right: 20px;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fffb;
+    padding: 10px 5px;
+    border-radius: 100px;
+    transform: translateY(-100%);
+}
+.nav .logo {
+    width: 70px;
+    height: 30px;
+    background-color: #000000;
+    border-radius: 50px;
+}
+.nav button {
+    width: 25px;
+    height: 25px;
+    background-color: #000000;
+    border-radius: 50px;
+}
+.nav * {
+    margin: 0 5px;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+}
+.nav a {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+}
+.bse {
+    font-size: 180px;
+    position: fixed;
+    z-index: 4;
+    line-height: 155px;
+    margin: 10px;
+    font-family: 'bold';
+    text-shadow: 0 0 3px #0005;
+}
+#best {
+    transform: translateY(800px);
+    color: #fff;
+}
+#selling {
+    transform: translateY(800px);
+    color: #1f0b09;
+}
+.exp-cookie {
+    position: fixed;
+    z-index: 10;
+    font-size: 25px;
+    font-family: 'bold';
+    text-align: center;
+    color: #1f0b09;
+    line-height: 20px;
+}
+.exp-cookie span {
+    font-family: 'bold';
+    font-size: 17px;
+}
+#exp1 {
+    opacity: 0;
+    top: 60%;
+    left: 50%;
+    transform: translateY(-400%) translateX(200%);
+}
+#exp2 {
+    opacity: 0;
+    top: 80%;
+    left: 50%;
+    transform: translateY(500%) translateX(-330%);
+}
+#exp3 {
+    opacity: 0;
+    top: 80%;
+    left: 50%;
+    transform: translateY(500%) translateX(230%);
+}
+.arrow {
+    position: fixed;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 0;
+    border-bottom: 0;
+    z-index: 10;
+    width: 250px;
+    height: 70px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    opacity: 0;
+}
+.arrow .circ1 {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateY(-4px) translateX(50%);
+}
+
+.arrow .circ2 {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transform: translateY(50%) translateX(-4px);
+}
+#arr1 {
+    transform: translateY(180%) translateX(-180%);
+    width: 250px;
+    height: 70px;
+}
+#arr2 {
+    transform: translateY(-150%) translateX(30%) scale(-100%);
+    width: 270px;
+    height: 70px;
+}
+#arr3 {
+    transform: translateY(180%) translateX(70%) scaleX(-100%);
+    width: 250px;
+    height: 70px;
+}
+@media (max-width: 800px) {
+    .fade0, .fade1, .fade2 {
+        font-size: 100px;
+        line-height: 50px;
+    }
+    .fade0 {
+        transform: translateX(-50%) translateY(-150px);
+    }
+    .fade1 {
+        transform: translateX(-50%) translateY(-50px);
+    }
+    .fade2 {
+        transform: translateX(-50%) translateY(50px);
+    }
+    .circleBg {
+        width: 120vw;
+        height: 120vw;
+    }
+    #cook1 {
+        width: 200px;
+    }
+    #cook2 {
+        width: 300px;
+    }
+    #cook3 {
+        width: 200px;
+    }
+    .bse {
+        font-size: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+    .nav {
+        width: calc(100% - 20px);
+        left: 0;
+        margin: 0 10px;
+    }
+    .nav .logo {
+        width: 40px;
+    }
+    .arrow {
+        display: none;
+    }
+}
