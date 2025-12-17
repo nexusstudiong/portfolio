@@ -34,19 +34,19 @@ let note = "";
 
 for (let i = 0; i < thnum; i++) {
     if (i == 0) {
-        link = "https://nexusstudiong.github.io/portfolio/Samples/flowclone/"
+        link = "http://127.0.0.1:5500/Samples/flowclone/"
     } else if (i == 1) {
-        link = "https://nexusstudiong.github.io/portfolio/Samples/cookie/"
+        link = "http://127.0.0.1:5500/Samples/cookie/"
     } else if (i == 2) {
-        link = "https://nexusstudiong.github.io/portfolio/Samples/gameon/"
+        link = "http://127.0.0.1:5500/Samples/gameon/"
     } else if (i == 3) {
-        link = "https://nexusstudiong.github.io/portfolio/Samples/brand/"
+        link = "http://127.0.0.1:5500/Samples/brand/"
     } else if (i == 4) {
-        link = "https://nexusstudiong.github.io/portfolio/"
+        link = "http://127.0.0.1:5500/"
     } else if (i == 5) {
         link = "https://moveeasecrew.com/"
     } else if (i == 6) {
-        link = "https://nexusstudiong.github.io/portfolio/Samples/port1/"
+        link = "http://127.0.0.1:5500/Samples/port1/"
     } else {
         link = "";
     }
@@ -79,9 +79,11 @@ for (let i = 0; i < thnum; i++) {
         </div>
     `;
     if (i > setthnum-1) {
-        const disT = document.getElementsByClassName('thumbs')[i];
-        disT.innerHTML = "";
-        disT.style.opacity = 0;
+        const disT = document.getElementsByClassName('thumbs')[i] || "";
+        if (disT != "") {
+            disT.innerHTML = "";
+            disT.style.opacity = 0;
+        }
     }
 }
 
