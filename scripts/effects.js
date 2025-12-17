@@ -34,19 +34,19 @@ let note = "";
 
 for (let i = 0; i < thnum; i++) {
     if (i == 0) {
-        link = "http://127.0.0.1:5500/Samples/flowclone/"
+        link = "https://nexusstudiong.github.io/portfolio/Samples/flowclone/"
     } else if (i == 1) {
-        link = "http://127.0.0.1:5500/Samples/cookie/"
+        link = "https://nexusstudiong.github.io/portfolio/Samples/cookie/"
     } else if (i == 2) {
-        link = "http://127.0.0.1:5500/Samples/gameon/"
+        link = "https://nexusstudiong.github.io/portfolio/Samples/gameon/"
     } else if (i == 3) {
-        link = "http://127.0.0.1:5500/Samples/brand/"
+        link = "https://nexusstudiong.github.io/portfolio/Samples/brand/"
     } else if (i == 4) {
-        link = "http://127.0.0.1:5500/"
+        link = "https://nexusstudiong.github.io/portfolio/"
     } else if (i == 5) {
         link = "https://moveeasecrew.com/"
     } else if (i == 6) {
-        link = "http://127.0.0.1:5500/Samples/port1/"
+        link = "https://nexusstudiong.github.io/portfolio/Samples/port1/"
     } else {
         link = "";
     }
