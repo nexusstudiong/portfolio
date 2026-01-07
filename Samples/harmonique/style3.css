@@ -1,0 +1,55 @@
+body {
+    padding-top: 60px;
+}
+.we-offer {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.we-offer h1 {
+    text-align: center;
+    padding-bottom: 30px;
+    color: #5f0a87;
+}
+.arrof {
+    display: flex;
+    padding-bottom: 30px;
+    gap: 3%;
+}
+#ff{
+    border-radius: 20px;
+    width: 50%;
+    padding: 2%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.headdd {
+    padding-bottom: 15px;
+}
+.headdd p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #5f0a87;
+}
+.gsgs {
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    color: #5f0a87;
+}
+#one {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#about-us {
+    flex-direction: row-reverse;
+}
+.boddd2 {
+    display: flex;
+}
+.boddd2 div {
+    width: 50%;
+}

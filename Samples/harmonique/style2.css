@@ -1,0 +1,114 @@
+@media (max-width: 800px) {
+    header{
+        display: none;
+    }
+    .sticktop{
+        top: 0;
+        padding: 0 15px;
+        height: 50px;
+        position: fixed;
+    }
+    .logo{
+        gap: 5px;
+    }
+    .logo img{
+        width: 25px;
+    }
+    .logo h2{
+        font-size: 14px;
+    }
+    #slide-style {
+      background: linear-gradient(to bottom, #e08dacff, #e08daccc, #e08dac88, #e08dac33, #e08dac00);
+    }
+    .slide .why {
+        font-size: 15px;
+    }
+    .slide p {
+        font-size: 17px;
+        width: 100%;
+        text-align: center;
+    }
+    #slide-style {
+        text-shadow: 2px 2px 1px #5f0a87;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #slide-style p span {
+        font-size: 35px;
+        text-shadow: 2px 2px 1px #5f0a87;
+    }
+    .display-header {
+        height: 100vh;
+    }
+    .about-us {
+        flex-direction: column;
+    }
+    .about-us #one {
+      width: 100%;
+      padding: 0 0 20px 0;
+    }
+    .about-us #two {
+      width: 100%;
+      border-top: 1px solid rgb(190, 190, 190);
+      border-left: 0;
+      padding: 30px 0;
+    }
+    .about-text span {
+        font-size: 30px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .fix {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .at-our-core {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+    .at-our-core .one {
+        width: 100%;
+        height: auto;
+    }
+    .at-our-core .two {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 30px;
+    }
+    .product-catalogue h1 {
+        font-size: 40px;
+    }
+    .pdc-exp {
+        width: 100%;
+    }
+    .container2 {
+        flex-direction: column;
+    }
+    .fix2 {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .conclude, .conclude2 {
+        display: none;
+    }
+    footer h2 {
+        color: #fff;
+    }
+    #footera {
+      flex-direction: column;
+    }
+    #footera div {
+        width: 100%;
+    }
+    input.name {
+      width: 100%;
+    }
+    input.feedb {
+      width: 100%;
+    }
+    nav {
+        display: none;
+    }
+}
