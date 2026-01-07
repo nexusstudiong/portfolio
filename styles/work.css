@@ -58,17 +58,28 @@ section h2 {
 }
 #first .lapt {
     width: 63vw;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 0;
 }
 .laptdiv, .phndiv {
     position: relative;
     overflow: hidden;
 }
 .laptdiv video {
-    width: 81.5%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
     position: absolute;
-    top: 5.3%;
-    left: 10%;
-    z-index: -1;
+    z-index: 1;
+    width: 70%;
+    border-radius: 3px;
+}
+.laptdiv .video-background {
+    left: 50%;
+    transform: translateX(-49%);
+    position: absolute;
+    width: 82%;
+    z-index: -2;
 }
 .phndiv video {
     position: absolute;
@@ -78,7 +89,8 @@ section h2 {
     padding: 1px 0.25vw 0;
 }
 .thumbcont {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-wrap: wrap;
     column-gap: 2vw;
     justify-content: center;
@@ -99,7 +111,7 @@ section h2 {
     text-decoration: underline;
 }
 .thumbs {
-    aspect-ratio: 1.9794;
+    aspect-ratio: 1.965;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -111,14 +123,19 @@ section h2 {
     scale: 1.05;
 }
 .thumbs video {
-    height: 100%;
+    width: 100%;
 }
 #wrks {
     padding-bottom: 0;
 }
-.stack a {
+.stack-web a {
     color: #1f497d;
     text-decoration: underline;
+}
+@media (max-width: 1000px) {
+    .thumbcont {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 @media (max-width: 800px) {
     #hhd {
@@ -159,7 +176,7 @@ section h2 {
         justify-content: center;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 670px) {
     .ins h1 {
         font-size: 3rem;
     }
@@ -175,5 +192,8 @@ section h2 {
     }
     #first > p {
         font-size: 0.8rem;
+    }
+    .thumbcont {
+        grid-template-columns: 1fr;
     }
 }

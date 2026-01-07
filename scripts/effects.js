@@ -1,90 +1,79 @@
-let h1exp = document.getElementsByClassName('h1exp');
-let job = document.getElementsByClassName('job');
-let menu = document.getElementById('menu');
-let closee = document.getElementById('close');
-let nav = document.getElementsByClassName('navlinkp');
-let hhd = document.getElementById('hhd');
-let socc = document.getElementById('socc') || "";
-let type = document.getElementsByClassName('type');
+const h1exp = document.getElementsByClassName('h1exp');
+const job = document.getElementsByClassName('job');
+const menu = document.getElementById('menu');
+const closee = document.getElementById('close');
+const nav = document.getElementsByClassName('navlinkp');
+const hhd = document.getElementById('hhd');
+const socc = document.getElementById('socc') || "";
+const type = document.getElementsByClassName('type');
 let screenHeight;
 
-let thbW = 380;
+const width = window.innerWidth;
 
-let width;
-let thbs = document.getElementsByClassName('webcard');
+const webContainer = document.getElementsByClassName('website-container')[0] || "";
 
-let tcont = document.getElementsByClassName('thumbcont')[0] || "";
-width = window.innerWidth;
+const listOfWebsites = [{
+    name: 'portfolio',
+    link: '/',
+    note: 'This is my portfolio website. Designed and developed by me',
+},{
+    name: 'moveeasecrew',
+    link: 'https://moveeasecrew.com/',
+    note: 'This is a complete inquiry website I designed and developed for a client',
+},{
+    name: 'harmonique',
+    link: '/Samples/harmonique/',
+    note: 'This was a website for an organisation that linked cleaners and personal support workers with clients. It has been taken down',
+},{
+    name: 'varcity',
+    link: '/Samples/varcity/',
+    note: 'This was a website for a mobile application tasked with connecting students across Nigerian universities',
+},{
+    name: 'pink',
+    link: '/Samples/flowclone/',
+    note: 'This is a static sample website inspired by <a href="https://justgowiththeflow.com">justgowiththeflow.com</a>. This was developed by me.',
+},{
+    name: 'cookies',
+    link: '/Samples/cookie/',
+    note: 'This is an incomplete sample website inspired by a design from <a href="https://www.instagram.com/marcelodesignxh">Marcelo Cadeno</a> on instagram. This was developed by me',
+},{
+    name: 'gameon',
+    link: '/Samples/gameon/',
+    note: 'This is an incomplete sample website developed by me.',
+},{
+    name: 'brand',
+    link: '/Samples/brand/',
+    note: 'This is an incomplete sample website developed by me.',
+},{
+    name: 'lumiera',
+    link: '/Samples/port1/',
+    note: 'This is a sample website with an experimental design language',
+},];
 
-let thnum = 7;
-let setthnum = thnum;
-
-if (width <=thbW*3) {
-    thnum = thnum%2 + thnum;
-} else if (width <=thbW*4) {
-    thnum = (3-thnum%3) + thnum;
-} else if (width <=thbW*5) {
-    thnum = (4-thnum%4) + thnum;
-} else if (width <=thbW*6) {
-    thnum = (5-thnum%5) + thnum;
-}
-
-let link = "";
-let note = "";
-
-for (let i = 0; i < thnum; i++) {
-    if (i == 0) {
-        link = "http://127.0.0.1:5500/Samples/flowclone/"
-    } else if (i == 1) {
-        link = "http://127.0.0.1:5500/Samples/cookie/"
-    } else if (i == 2) {
-        link = "http://127.0.0.1:5500/Samples/gameon/"
-    } else if (i == 3) {
-        link = "http://127.0.0.1:5500/Samples/brand/"
-    } else if (i == 4) {
-        link = "http://127.0.0.1:5500/"
-    } else if (i == 5) {
-        link = "https://moveeasecrew.com/"
-    } else if (i == 6) {
-        link = "http://127.0.0.1:5500/Samples/port1/"
-    } else {
-        link = "";
-    }
-
-    if (i == 0) {
-        note = `This is a static sample website inspired by <a href="https://justgowiththeflow.com">justgowiththeflow.com</a>. This was developed by me.`
-    } else if (i == 1) {
-        note = `This is an incomplete sample website inspired by a design from <a href="https://www.instagram.com/marcelodesignxh">Marcelo Cadeno</a> on instagram. This was developed by me.`
-    } else if (i == 2) {
-        note = "This is an incomplete sample website developed by me."
-    } else if (i == 3) {
-        note = "This is an incomplete sample website developed by me."
-    } else if (i == 4) {
-        note = "This is my portfolio website. Designed and developed by me"
-    } else if (i == 5) {
-        note = "This is a complete inquiry website I designed and developed for a client"
-    } else if (i == 6) {
-        note = "This is a sample website with an experimental design language"
-    } else {
-        note = "";
-    }
-
-    
-    tcont.innerHTML += `
+listOfWebsites.forEach((website) => {
+    webContainer.innerHTML += `
         <div class="webcard">
             <div class="thumbs">
-                <a href="${link}"><video src="https://moveeasecrew.com/media/vids/${i+1}.mp4" loop autoplay muted playsinline></video></a>
+                <a href="${website.link}">
+                    <video
+                        src="/media/vids/${website.name}.mp4"
+                        loop 
+                        autoplay
+                        muted
+                        playsinline
+                        class="website-video"
+                    ></video>
+                    </a>
             </div>
-            <p>${note}</p>
+            <p>${website.note}</p>
         </div>
     `;
-    if (i > setthnum-1) {
-        const disT = document.getElementsByClassName('thumbs')[i] || "";
-        if (disT != "") {
-            disT.innerHTML = "";
-            disT.style.opacity = 0;
-        }
-    }
+});
+
+const websiteVideos = document.getElementsByClassName('website-video');
+
+for (let i = 0; i < websiteVideos.length; i++) {
+    websiteVideos[i].pause();
 }
 
 function screenH() {
@@ -105,7 +94,6 @@ function cropp(){
             h1exp[i].style.backgroundImage = `linear-gradient(to bottom, #888 100%, #444 100%)`;
         }
     }
-    
     for (let i = 0; i < job.length; i++) {
         let pos = job[i].getBoundingClientRect().top;
     
@@ -126,6 +114,11 @@ document.addEventListener('DOMContentLoaded', function(){screenH(); cropp()});
 window.addEventListener('resize', screenH());
 
 window.addEventListener('scroll', function(){
+
+    for (let i = 0; i < websiteVideos.length; i++) {
+        screenHeight > websiteVideos[i].getBoundingClientRect().top && websiteVideos[i].play();
+    }
+
     for (let i = 0; i < h1exp.length; i++) {
         let pos = h1exp[i].getBoundingClientRect().top;
     
@@ -223,11 +216,10 @@ if (hometag.innerHTML == "home") {
 
     setTimeout (function () {
         setInterval (function () {
-
-        type[0].parentElement.style.animationName = "opentype";
-        type[0].parentElement.style.animationDuration = "0.3s";
-        type[0].parentElement.style.animationFillMode = "both";
-        type[0].parentElement.style.animationTimingFunction = "ease-in";
+            type[0].parentElement.style.animationName = "opentype";
+            type[0].parentElement.style.animationDuration = "0.3s";
+            type[0].parentElement.style.animationFillMode = "both";
+            type[0].parentElement.style.animationTimingFunction = "ease-in";
         }, 3000);
         
     }, 1000);
@@ -242,27 +234,3 @@ if (hometag.innerHTML == "home") {
         }, 500)
     }, 1000);
 }
-
-function thbSize() {
-    width = window.innerWidth;
-
-    for (let i = 0; i < thbs.length; i++) {
-        if (width <= thbW*2) {
-            thbs[i].style.width = `${100}%`;
-        } else if (width <=thbW*3) {
-            thbs[i].style.width = `${(100/2)-2}%`;
-        } else if (width <=thbW*4) {
-            thbs[i].style.width = `${(100/3)-2}%`;
-        } else if (width <=thbW*5) {
-            thbs[i].style.width = `${(100/4)-2}%`;
-        } else if (width <=thbW*6) {
-            thbs[i].style.width = `${(100/5)-2}%`;
-        }
-    }
-}
-
-thbSize();
-
-window.addEventListener('resize', function(){
-    thbSize();
-});

@@ -317,7 +317,7 @@ label {
     font-weight: bold;
 }
 label span {
-    color: #f00;
+    color: var(--pry-color);
 }
 input, select, textarea {
     margin-top: 10px;
@@ -483,6 +483,34 @@ ul a:hover {
 @keyframes opentype {
     0% {width: 0%}
     100% {width: 100%;}
+}
+@keyframes stack {
+    from{transform: translateX(0);}
+    to{transform: translateX(-100%);}
+}
+.stack {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    margin-top: 70px;
+}
+.stack-animation {
+    display: flex;
+    align-items: center;
+    animation-name: stack;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.stack img {
+    height: 100px;
+    margin-left: 50px;
+}
+.stack img.large-img {
+    height: 50px;
+}
+.stack img.medium-img {
+    height: 70px;
 }
 @media (min-width: 1800px) {
     header div h1 {
@@ -789,5 +817,15 @@ ul a:hover {
         font-size: 1.1rem;
         padding: 6px 20px;
         border-radius: 10px;
+    }
+    .stack img {
+        height: 70px;
+        margin-left: 25px;
+    }
+    .stack img.large-img {
+        height: 25px;
+    }
+    .stack img.medium-img {
+        height: 40px;
     }
 }
