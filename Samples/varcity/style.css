@@ -1,0 +1,500 @@
+
+@font-face {
+    font-family: outfit;
+    src: url('./fonts/Outfit-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: thin;
+    src: url('./fonts/Outfit-Thin.ttf');
+}
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'outfit', sans-serif;
+}
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+    display: block;
+    background-color: #000;
+}
+p {
+    margin: 0;
+    color: white;
+}
+nav {
+    width: 100%;
+    padding: 7px 5%;
+    background-color: rgba(0, 0, 0, 0.93);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+@keyframes slideIn {
+    0% {opacity: 0; transform: translateY(-100%);}
+    100% {opacity: 1; transform: translateY(0%);}
+}
+.logo-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 17px;
+}
+.logo-div p {
+    margin: 0;
+    animation-duration: 0.5s;
+    animation-delay: 1.15s;
+    opacity: 1;
+    animation-fill-mode: both;
+}
+.logo {
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-right: 10px;
+    animation-delay: 1s;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+.navlink {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    font-size: 15px;
+    color: #fff;
+}
+.navlink a:hover {
+    color: #f00;
+}
+.help {
+    animation-duration: 0.5s;
+    animation-delay: 1.3s;
+    opacity: 1;
+    animation-fill-mode: both;
+    cursor: pointer;
+    margin-left: 20px;
+    color: #fff;
+}
+.en {
+    animation-duration: 0.5s;
+    animation-delay: 1.15s;
+    opacity: 1;
+    animation-fill-mode: both;
+    cursor: pointer;
+    margin-left: 20px;
+    color: #fff;
+}
+.download {
+    padding: 7px 20px;
+    font-size: 13px;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    border-radius: 100px;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    opacity: 1;
+    animation-fill-mode: both;
+    border: 2px solid #ffffff;
+    transition-duration: 0.4s;
+    margin-left: 20px;
+}
+.download:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+@keyframes up {
+    0% {height: 100vh;}
+    100% {height: 0vh;}
+}
+@keyframes up2 {
+    0% {height: 0vh;}
+    100% {height: 100vh;}
+}
+@keyframes textCome {
+    0% {height: 0px;}
+    100% {height: 130px;}
+}
+@keyframes textGo {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+.bigAnim {
+    width: 100%;
+    height: 0vh;
+    background-color: #000000;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.animText {
+    width: 100%;
+    height: 130px;
+    font-size: 100px;
+    text-align: center;
+    animation-name: textCome, textGo;
+    animation-duration: 1s, 0.5s;
+    animation-delay: 0s, 1.75s;
+    animation-fill-mode: both;
+    overflow: hidden;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #f0f, #f00, #ff0);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+}
+.bigAnim2 {
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    overflow: hidden;
+    padding: 50px 5% 0px 5%;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 77% 50%, #1b0000, #050202);
+    border-radius: 20px 20px 0px 0px;
+    color: white;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: top;
+    align-items: center;
+}
+.cLeft {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+@keyframes cHead{
+    0% {filter: blur(5px); opacity: 0;}
+    100% {filter: blur(0px); opacity: 1;}
+}
+.cont-head {
+    margin: 0;
+    text-align: left;
+    font-size: 70px;
+    line-height: 70px;
+}
+.cont-head .ss1 {
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+.cont-head .ss2 {
+    animation-duration: 1s;
+    animation-delay: 2.55s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+.cont-head .s3 {
+    background-image: linear-gradient(to bottom, transparent 90%, #ff0000 10%);
+    background-size: 100% 85%;
+    animation-duration: 1s;
+    animation-delay: 2.6s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+.cont-head .s4 {
+    animation-duration: 1s;
+    animation-delay: 2.65s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+.exp {
+    margin-top: 30px;
+    width: 90%;
+}
+.cont-exp {
+    font-size: 18px;
+    font-family: 'thin';
+    animation-duration: 1s;
+    animation-delay: 2.7s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+.downloadDiv {
+    display: flex;
+    flex-direction: row;
+    animation-duration: 1s;
+    animation-delay: 2.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+.OSbutton {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: #fff;
+    border: 0;
+    text-align: left;
+    font-size: 11px;
+    margin: 17px 10px 0px 0px;
+    padding: 10px 13px;
+    border-radius: 20px;
+    align-items: center;
+    border: 2px solid #690000;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.OSbutton:hover {
+    transform: scale(105%);
+}
+.OSbutton img {
+    width: 30px;
+    margin-right: 10px;
+}
+.OSbutton p {
+    color: #fff;
+}
+.OSbutton .gg {
+    font-size: 18px;
+    color: #fff;
+}
+.OSbutton .ap {
+    font-size: 20px;
+    color: #fff;
+}
+.mkp {
+    width: 300px;
+    height: 609.5px;
+    margin: 120px 120px 0px 0px;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+.mkp:hover {
+    transform: scale(104%);
+}
+.long {
+    width: 100%;
+    background-color: #000000;
+    padding: 60px 5% 70px 5%;
+    overflow-x: hidden;
+}
+.tnfHead {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.tnfExp {
+    text-align: center;
+    font-size: 15px;
+}
+@keyframes longAnim {
+    0% {transform: translateY(50%); opacity: 0;}
+    100% {transform: translateY(0%); opacity: 1;}
+}
+.block1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    font-size: 20px;
+    align-items: center;
+}
+.block1 .img1 {
+    width: 50%;
+    height: 250px;
+    background-color: #ffff0000;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img1 .img1i {
+    height: 110%;
+}
+.txt1 {
+    width: 50%;
+    text-align: left;
+}
+.s1 {
+    color: #f00;
+    background-image: linear-gradient(to bottom, transparent 70%, #2a2a00 30%);
+}
+.s2 {
+    font-size: 14px;
+}
+.block2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    font-size: 20px;
+    align-items: center;
+}
+.block2 .img1 {
+    width: 50%;
+    height: 250px;
+    background-color: #ffff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.OSbutton2 {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: #fff;
+    border: 0;
+    text-align: left;
+    font-size: 7px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    align-items: center;
+    margin-right: 10px;
+}
+.OSbutton2 img {
+    width: 16px;
+    margin-right: 10px;
+}
+.OSbutton2 p {
+    color: #fff;
+}
+.OSbutton2 .gg {
+    font-size: 14px;
+    color: #fff;
+}
+.OSbutton2 .ap {
+    font-size: 15px;
+    color: #fff;
+}
+.block3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block3 .img1 {
+    width: 500px;
+    height: 250px;
+    margin-right: 100px;
+    background-color: #ffff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img1 .img3i {
+    width: 65%;
+}
+.block4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    font-size: 20px;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #080808;
+}
+.block4 .txt1 {
+    font-size: 20px;
+    margin-left: 5%;
+}
+.block4 .img1 {
+    width: 60%;
+    height: 250px;
+    background-image: url('img4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer {
+    background-color: #690000;
+    width: 100%;
+    padding: 30px 7%;
+}
+.f1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: top;
+}
+.inverse-logo {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.footB {
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+}
+.footB span {
+    color: #fff;
+    font-size: 10px;
+    font-weight: lighter;
+}
+.available {
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+}
+.available div {
+    margin-top: 10px;
+}
+.f2 {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+}
+#txt1 {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+#txt2 {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+#txt3 {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+#txt4 {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
