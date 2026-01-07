@@ -14,7 +14,7 @@ const webContainer = document.getElementsByClassName('website-container')[0] || 
 
 const listOfWebsites = [{
     name: 'portfolio',
-    link: '/',
+    link: 'https://nexusstudiong.github.io/portfolio/',
     note: 'This is my portfolio website. Designed and developed by me',
 },{
     name: 'moveeasecrew',
@@ -22,31 +22,31 @@ const listOfWebsites = [{
     note: 'This is a complete inquiry website I designed and developed for a client',
 },{
     name: 'harmonique',
-    link: '/Samples/harmonique/',
+    link: 'https://nexusstudiong.github.io/portfolio/Samples/harmonique/',
     note: 'This was a website for an organisation that linked cleaners and personal support workers with clients. It has been taken down',
 },{
     name: 'varcity',
-    link: '/Samples/varcity/',
+    link: 'https://nexusstudiong.github.io/portfolio/Samples/varcity/',
     note: 'This was a website for a mobile application tasked with connecting students across Nigerian universities',
 },{
     name: 'pink',
-    link: '/Samples/flowclone/',
+    link: 'https://nexusstudiong.github.io/portfolio/Samples/flowclone/',
     note: 'This is a static sample website inspired by <a href="https://justgowiththeflow.com">justgowiththeflow.com</a>. This was developed by me.',
 },{
     name: 'cookies',
-    link: '/Samples/cookie/',
+    link: 'https://nexusstudiong.github.io/portfolio/Samples/cookie/',
     note: 'This is an incomplete sample website inspired by a design from <a href="https://www.instagram.com/marcelodesignxh">Marcelo Cadeno</a> on instagram. This was developed by me',
 },{
     name: 'gameon',
-    link: '/Samples/gameon/',
+    link: 'https://nexusstudiong.github.io/portfolio/Samples/gameon/',
     note: 'This is an incomplete sample website developed by me.',
 },{
     name: 'brand',
-    link: '/Samples/brand/',
+    link: 'https://nexusstudiong.github.io/portfolio/Samples/brand/',
     note: 'This is an incomplete sample website developed by me.',
 },{
     name: 'lumiera',
-    link: '/Samples/port1/',
+    link: 'https://nexusstudiong.github.io/portfolio/Samples/port1/',
     note: 'This is a sample website with an experimental design language',
 },];
 
@@ -56,7 +56,7 @@ listOfWebsites.forEach((website) => {
             <div class="thumbs">
                 <a href="${website.link}">
                     <video
-                        src="/media/vids/${website.name}.mp4"
+                        src="https://nexusstudiong.github.io/portfolio/media/vids/${website.name}.mp4"
                         loop 
                         autoplay
                         muted
